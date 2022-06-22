@@ -1,6 +1,5 @@
 require('dotenv').config();
 
-const mongoose = require('mongoose')
 const http = require('http');
 const app = require('./index')
 const port = process.env.DEFAULT_PORT || 4000;

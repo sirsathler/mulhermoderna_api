@@ -12,7 +12,10 @@ exports.getProduct = function(req, res) {
 };
 
 exports.createProduct = function(req, res) {
-  var newProduct = new Product(req.body);
+  var newProduct = new Product({
+    name: req.body.name,
+    price: req.body.price,
+  });
   newProduct.save((err, product) =>{
     if (err)
       res.send(err);
