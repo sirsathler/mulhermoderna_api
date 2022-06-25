@@ -1,10 +1,10 @@
 require('../models/ProductSchema');
 
 var mongoose = require('mongoose');
-var Product = mongoose.model('products');
+var products = mongoose.model('products');
 
 exports.getProduct = function(req, res) {
-  Product.find({}, (err, product) => {
+  products.find({}, (err, product) => {
     if (err)
       res.send(err);
     res.json(product);
